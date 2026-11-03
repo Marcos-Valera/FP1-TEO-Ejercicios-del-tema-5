@@ -9,8 +9,14 @@ def elimina_duplicados(lista: list) -> list:
     Devuelve:
     list: La lista sin elementos duplicados, manteniendo el orden original.
     """
-    # TODO: Implementar la función
-    pass
+    lista_resultado = []
+    vistos = set()
+    for elem in lista:
+        if elem not in vistos:
+            lista_resultado.append(elem)
+            vistos.add(elem)
+
+    return lista_resultado
 
 def une_conjuntos(lista_de_conjuntos: list[set]) -> set:
     """

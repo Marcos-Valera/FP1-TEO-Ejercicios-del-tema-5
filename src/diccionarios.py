@@ -11,8 +11,11 @@ def sustituye_palabras(texto: str, diccionario: dict[str, str]) -> str:
     Devuelve:
         Texto resultante de las sustituciones.
     """
-    # TODO: Implementar la función
-    pass
+    texto_modificado = texto
+    for key in diccionario:
+        if key in texto:
+            texto_modificado = texto_modificado.replace(key, diccionario[key])
+    return texto_modificado
 
 
 def indexa_por_iniciales(texto: str) -> dict[str, set[str]]:

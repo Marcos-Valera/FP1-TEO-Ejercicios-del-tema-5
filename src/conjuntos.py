@@ -28,8 +28,16 @@ def une_conjuntos(lista_de_conjuntos: list[set]) -> set:
     Devuelve:
     set: El conjunto resultante de la unión de todos los conjuntos.
     """
-    # TODO: Implementar la función
-    pass
+    if len(lista_de_conjuntos) == 0:
+        return set()
+    
+    suma = set()
+
+    for conjunto in lista_de_conjuntos:
+        suma = suma | conjunto
+
+    return suma
+
 
 def intersecta_conjuntos(lista_de_conjuntos: list[set]) -> set:
     """

@@ -49,5 +49,12 @@ def intersecta_conjuntos(lista_de_conjuntos: list[set]) -> set:
     Devuelve:
     set: El conjunto resultante de la intersección de todos los conjuntos.
     """
-    # TODO: Implementar la función
-    pass
+    if len(lista_de_conjuntos) == 0:
+        return set()
+    
+    intersec = une_conjuntos(lista_de_conjuntos)
+
+    for conjunto in lista_de_conjuntos:
+        intersec = intersec & conjunto
+
+    return intersec

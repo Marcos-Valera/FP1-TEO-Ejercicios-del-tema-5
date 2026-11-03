@@ -52,9 +52,9 @@ def intersecta_conjuntos(lista_de_conjuntos: list[set]) -> set:
     if len(lista_de_conjuntos) == 0:
         return set()
     
-    intersec = une_conjuntos(lista_de_conjuntos)
+    intersec = lista_de_conjuntos[0]
 
-    for conjunto in lista_de_conjuntos:
+    for conjunto in lista_de_conjuntos[1:]:
         intersec = intersec & conjunto
 
     return intersec
